@@ -6,37 +6,36 @@
 
 ## News
 
-- **[2025/02/04]** We have released our model and data. We are currently working on the code and will release it very soon.
+- **[2025/02/04]** We have released our model and data through [HuggingFace](https://huggingface.co/Satori-reasoning). The code will be released soon in the coming weeks.
 
 ## **Introduction**
 
-Satori is a 7B parameter LLM that can **autoregressive search** for reasoning, allowing it to self-reflect, explore alternatives, and improve without external guidance. Built on **Qwen-2.5-Math-7B**, Satori achieves state-of-the-art reasoning performance primarily through **Format Tuning** and **self-improvement via reinforcement learning (RL)**.
+Satori is a 7B parameter LLM that can **autoregressive search** for reasoning, allowing it to self-reflect and self-explore alternative strategies without external guidance. Built on **Qwen-2.5-Math-7B**, Satori achieves state-of-the-art reasoning performance through small-scale **Format Tuning (FT)** and large-scale **self-improvement via reinforcement learning (RL)**.
 
 ## Key Features
 
-- **Autoregressive Search**: Self-reflection and self-exploration without external feedback.
+- **Autoregressive Search Capabilities:** Self-reflection and self-exploration without external feedback.
 
-- **COAT** Reasoning (Chain-of-Action-Thought)
+- **Chain-of-Action-Thought (COAT) Reasoning:**
+  Leverage several meta-action tokens to guide reasoning,
 
-  : Introduces meta-action tokens to guide reasoning:
+  - **Continue Reasoning** (<|continue|>): encourages the LLM to build upon its current reasoning trajectory by generating the next intermediate step. 
+  - **Reflect** (<|reflect|>): prompts the model to pause and verify the correctness of prior reasoning steps.
+  - **Explore Alternative Solution** (<|explore|>): signals the model to identify critical flaws in its reasoning and explore a new solution.
 
-  - `<|continue|>`: Continue reasoning.
-  - `<|reflect|>`: Reflect and verify past steps.
-  - `<|explore|>`: Explore alternative solutions.
+- **Transferability**: Train on math domain, but generalize to unseen domains beyond math.
 
-- **Transferable Reasoning**: Generalizes to unseen domains beyond math.
-
-## Training Pipeline
+## Training Framework
 
 ### **1. Format Tuning (FT) via Imitation Learning**
 
-- Uses a **multi-agent data synthesis framework** (Generator, Critic, Reward Model) to create **COAT-style** demonstrations.
-- Trains the base model to internalize COAT reasoning format.
+- Use a **multi-agent data synthesis framework** (Generator, Critic, Reward Model) to create **COAT-style** demonstration trajectories.
+- Train the base model to imitate the COAT reasoning format.
 
 ### **2. Self-Improvement via Reinforcement Learning (RL)**
 
-- **Restart and Explore (RAE)**: Trains the model to reason from intermediate states, promoting deeper exploration.
-- **Iterative Self-Improvement**: Alternates between RL and supervised fine-tuning for continuous optimization.
+- **Restart and Explore (RAE)**: Train the model to reason from intermediate states to encourage deeper reflection.
+- **Iterative Self-Improvement**: Alternate between RL training and policy distillation for iterative improvements.
 
 ## **Evaluation**
 
@@ -103,8 +102,8 @@ For questions, please:
 ```
 @article{TBD,
   title={Satori: Reinforcement Learning with Chain-of-Action-Thought Enhances LLM Reasoning via Autoregressive Search},
-  author={TBD},
-  journal={TBD},
+  author={Maohao Shen and Guangtao Zeng and Zhenting Qi and Zhang-Wei Hong and Zhenfang Chen and Wei Lu and Gregory Wornell and Subhro Das and David Cox and Chuang Gan},
+  journal={arXiv preprint arXiv: TBD},
   year={2025}
 }
 ```
