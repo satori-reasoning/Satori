@@ -2,6 +2,12 @@
 
 [![Homepage](https://img.shields.io/badge/🏠-Homepage-3C47EB.svg)](https://satori-reasoning.github.io/) &nbsp;&nbsp; [![HuggingFace](https://img.shields.io/badge/🤗-Model&Demo-E87948.svg)](https://huggingface.co/Satori-reasoning) &nbsp;&nbsp;
 
+
+
+## News
+
+- **[2025/02/04]** We have released our model and data. We are currently working on the code and will release it very soon.
+
 ## **Introduction**
 
 Satori is a 7B parameter LLM that can **autoregressive search** for reasoning, allowing it to self-reflect, explore alternatives, and improve without external guidance. Built on **Qwen-2.5-Math-7B**, Satori achieves state-of-the-art reasoning performance primarily through **Format Tuning** and **self-improvement via reinforcement learning (RL)**.
