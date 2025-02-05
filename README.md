@@ -1,6 +1,6 @@
 # Satori: Reinforcement Learning with Chain-of-Action-Thought Enhances LLM Reasoning via Autoregressive Search
 
-[![Homepage](https://img.shields.io/badge/🏠-Homepage-3C47EB.svg)](https://satori-reasoning.github.io/) &nbsp;&nbsp; [![HuggingFace](https://img.shields.io/badge/🤗-Model&Demo-E87948.svg)](https://huggingface.co/Satori-reasoning) &nbsp;&nbsp;
+[![Homepage](https://img.shields.io/badge/🏠-Homepage-3C47EB.svg)](https://satori-reasoning.github.io/) &nbsp;&nbsp; [![HuggingFace](https://img.shields.io/badge/🤗-Model&Demo-E87948.svg)](https://huggingface.co/Satori-reasoning) &nbsp;&nbsp; [![Paper](https://img.shields.io/badge/arXiv-paper-b31b1b)](https://arxiv.org/pdf/2502.02508) &nbsp;&nbsp;
 
 
 
@@ -100,10 +100,13 @@ For questions, please:
 
 ## **Citation**
 ```
-@article{TBD,
-  title={Satori: Reinforcement Learning with Chain-of-Action-Thought Enhances LLM Reasoning via Autoregressive Search},
-  author={Maohao Shen and Guangtao Zeng and Zhenting Qi and Zhang-Wei Hong and Zhenfang Chen and Wei Lu and Gregory Wornell and Subhro Das and David Cox and Chuang Gan},
-  journal={arXiv preprint arXiv: TBD},
-  year={2025}
+@misc{shen2025satorireinforcementlearningchainofactionthought,
+      title={Satori: Reinforcement Learning with Chain-of-Action-Thought Enhances LLM Reasoning via Autoregressive Search}, 
+      author={Maohao Shen and Guangtao Zeng and Zhenting Qi and Zhang-Wei Hong and Zhenfang Chen and Wei Lu and Gregory Wornell and Subhro Das and David Cox and Chuang Gan},
+      year={2025},
+      eprint={2502.02508},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2502.02508}, 
 }
 ```
