@@ -1,12 +1,13 @@
 # Satori: Reinforcement Learning with Chain-of-Action-Thought Enhances LLM Reasoning via Autoregressive Search
-
 [![Homepage](https://img.shields.io/badge/🏠-Homepage-3C47EB.svg)](https://satori-reasoning.github.io/) &nbsp;&nbsp; [![HuggingFace](https://img.shields.io/badge/🤗-Model&Demo-E87948.svg)](https://huggingface.co/Satori-reasoning) &nbsp;&nbsp; [![Paper](https://img.shields.io/badge/arXiv-paper-b31b1b)](https://arxiv.org/pdf/2502.02508) &nbsp;&nbsp;
 
+This repository contains the official implementation of `Satori-Qwen-7B` in the paper [Satori: Reinforcement Learning with Chain-of-Action-Thought Enhances LLM Reasoning via Autoregressive Search](https://arxiv.org/pdf/2502.02508) (ICML 2025).
 
 
-## News
-
-- **[2025/02/04]** We have released our model and data through [HuggingFace](https://huggingface.co/Satori-reasoning). The code will be released soon in the coming weeks.
+## News 🎉
+- **[2025/06/02]** We have released our RL training code to help the community reproduce our work!
+- **[2025/05/01]** Our paper has been accepted to present at ICML 2025!
+- **[2025/02/04]** We have released our model and data through [HuggingFace](https://huggingface.co/Satori-reasoning).
 
 ## **Introduction**
 
@@ -38,7 +39,7 @@ Satori is a 7B parameter LLM that can **autoregressive search** for reasoning, a
 - **Iterative Self-Improvement**: Alternate between RL training and policy distillation for iterative improvements.
 
 
-## Quick Start
+## Quick Start 🔧
 
 ### Installation
 
@@ -48,7 +49,10 @@ cd Satori
 pip install -e .
 ```
 
-## Train
+### Model and Data
+- Download model checkpoints: [SFT Model Ckpt](https://huggingface.co/Satori-reasoning/Satori-SFT-7B), [Outcome Reward Model](https://huggingface.co/Satori-reasoning/Satori-RM-7B).
+- Download RL training data: [RL Data with RAE](https://huggingface.co/datasets/Satori-reasoning/Satori_RL_data_with_RAE).
+### Training Script
 ```bash
 bash examples/satori/train.sh
 ```
