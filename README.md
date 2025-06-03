@@ -37,6 +37,22 @@ Satori is a 7B parameter LLM that can **autoregressive search** for reasoning, a
 - **Restart and Explore (RAE)**: Train the model to reason from intermediate states to encourage deeper reflection.
 - **Iterative Self-Improvement**: Alternate between RL training and policy distillation for iterative improvements.
 
+
+## Quick Start
+
+### Installation
+
+To train our model with OpenRLHF, first install the environment with:
+```bash
+cd Satori
+pip install -e .
+```
+
+## Train
+```bash
+bash examples/satori/train.sh
+```
+
 ## **Evaluation**
 
 ### **Math Reasoning Evaluation**
